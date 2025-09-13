@@ -1,3 +1,5 @@
+# A lambda function is a small anonymous function.
+# A lambda function can take any number of arguments, but can only have one expression.
 # Examples of lambda functions in Python
 
 # Basic lambda function
@@ -24,3 +26,10 @@ def apply_func(f, value):
 
 result = apply_func(lambda x: x * 10, 7)
 print("Applied lambda:", result)  # Output: 70
+
+
+# Use that function definition to make a function that always doubles the number you send in:
+def myfunc(n):
+  return lambda a : a * n
+mydoubler = myfunc(2)
+print(mydoubler(11))
