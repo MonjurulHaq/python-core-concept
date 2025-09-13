@@ -32,3 +32,19 @@ def factorial(x):
     return x * factorial(x-1)
 
 print(f"Factorial : {factorial(5)}")
+
+
+#Decorators 
+def simple_decorator(func):
+    def wrapper():
+        print(">>> Starting function")
+        func()
+        print(">>> Function finished")
+    return wrapper
+
+@simple_decorator
+def greet():
+    print("Hello, World!")
+
+# Calling the decorated function
+greet()
